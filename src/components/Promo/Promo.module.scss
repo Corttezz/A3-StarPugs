@@ -1,0 +1,101 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.promo {
+  @include device(notebook) {
+    padding: 6rem 3rem;
+  }
+
+  @include device(tablet) {
+    justify-content: center;
+  }
+
+  @include max-width;
+
+  max-height: 48rem;
+  scroll-margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 1.2rem 6rem;
+    font-family: $textFont;
+    background-color: $primary;
+    color: $lightSecondary;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    width: max-content;
+    margin: 1.2rem 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($lightPrimary, 3);
+    }
+  }
+
+  .content {
+    display: flex;
+
+    .div1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 1.6rem;
+      padding: 10rem 10rem;
+      background-color: $secondary;
+      border-top-left-radius: 20px;
+      border-end-start-radius: 20px;
+
+      .btn {
+        display: inline-block;
+        border: solid $darkSecondary;
+        padding: 1rem 1rem;
+        font-family: $textFont;
+        background-color: $secondary;
+        color: $darkSecondary;
+        font-weight: 700;
+        border-radius: 20px;
+        font-size: 1.4rem;
+        width: max-content;
+        margin: 1.2rem 0;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $secondary;
+          color: $primary;
+        }
+      }
+    }
+
+    .div2 {
+      background-color: $primary;
+      display: flex;
+      justify-content: baseline;
+      align-items: baseline;
+      border-end-end-radius: 20px;
+      border-top-right-radius: 20px;
+
+      h2 {
+        color: $background;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      .image {
+        filter: drop-shadow(0.3rem 0.6rem 1rem rgba($black, 0.25));
+        -webkit-filter: drop-shadow(0.3rem 0.6rem 1rem rgba($black, 0.25));
+
+        @include device(tablet) {
+          display: none;
+        }
+      }
+    }
+  }
+}

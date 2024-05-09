@@ -1,0 +1,43 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.details {
+  @include max-width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16rem;
+
+  .roast {
+    max-width: 15rem;
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .types {
+      display: flex;
+      gap: 1rem;
+
+      span {
+        border-radius: 20px;
+        padding: 1rem 1.2rem;
+        color: $lightSecondary;
+      }
+
+      .light {
+        background-color: $secondary;
+      }
+
+      .medium {
+        background-color: $mediumSecondary;
+      }
+
+      .dark {
+        background-color: $lightDarkSecondary;
+      }
+    }
+  }
+}

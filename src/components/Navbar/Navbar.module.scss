@@ -1,0 +1,43 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.navbar {
+  @include max-width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 2rem;
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+  }
+
+  .navigation {
+    ul {
+      li {
+        display: inline-block;
+
+        &:not(:last-of-type) {
+          margin-right: 2rem;
+        }
+
+        a {
+          padding: 1rem;
+          color: $mediumSecondary;
+
+          &:hover {
+            color: lighten($mediumSecondary, 15);
+          }
+        }
+      }
+    }
+  }
+}

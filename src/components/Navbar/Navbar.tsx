@@ -1,4 +1,4 @@
-import Logo from "@/UI/Logo";
+import Logo from "@/ui/Logo";
 import styles from "./Navbar.module.scss";
 
 const links = [

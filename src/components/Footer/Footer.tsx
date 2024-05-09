@@ -1,5 +1,5 @@
-import Logo from "@/UI/Logo";
-import SocialLinks from "@/UI/SocialLinks";
+import Logo from "@/ui/Logo";
+import SocialLinks from "@/ui/SocialLinks";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {

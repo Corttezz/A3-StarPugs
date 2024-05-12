@@ -1,3 +1,4 @@
+import ButtonSecondary from "@/ui/ButtonSecondary";
 import Logo from "@/ui/Logo";
 import SocialLinks from "@/ui/SocialLinks";
 import styles from "./Footer.module.scss";
@@ -12,7 +13,7 @@ export default function Footer() {
           </h2>
           <h3 className="p">Seu refúgio pet-friendly.</h3>
           <SocialLinks />
-          <button className={styles.btn}>Fale Conosco</button>
+          <ButtonSecondary name="Fale Conosco" href="/contact-us" />
         </div>
         <div className={styles.column2}>
           <h2 className="p">Faça-nos uma Visita</h2>

@@ -1,16 +1,20 @@
 import Logo from "@/ui/Logo";
+import Link from "next/link";
+import { FaRegHeart } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 import styles from "./Navbar.module.scss";
 
 const links = [
-  { url: "#products", text: "Home" },
-  { url: "#about", text: "Cardápio" },
-  { url: "#social", text: "Shop" },
+  { url: "/", text: "Home" },
+  { url: "/cardapio", text: "Cardápio" },
+  { url: "/shop", text: "Shop" },
+  { url: "/login", text: "Login" },
 ];
 
 export default function Navbar() {
   const renderLinks = links.map((link, i) => (
     <li key={i}>
-      <a href={link.url}>{link.text}</a>
+      <Link href={link.url}>{link.text}</Link>
     </li>
   ));
 
@@ -23,7 +27,19 @@ export default function Navbar() {
         <Logo />
       </div>
       <nav className={styles.navigation}>
-        <ul>{renderLinks.slice(2, 4)}</ul>
+        <ul>
+          <li>
+            <Link href="favoritos">
+              <FaRegHeart />
+            </Link>
+          </li>
+          <li>
+            <Link href="carrinho">
+              <FiShoppingCart />
+            </Link>
+          </li>
+          {renderLinks.slice(3, 4)}
+        </ul>
       </nav>
     </section>
   );

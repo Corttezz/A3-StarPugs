@@ -17,8 +17,8 @@ export default function Promo() {
             className={styles.image}
             src="/caneca.png"
             alt="caneca starpugs"
-            width={502}
-            height={474}
+            width={424}
+            height={424}
           />
           <h2>Caneca StarPugs</h2>
         </div>

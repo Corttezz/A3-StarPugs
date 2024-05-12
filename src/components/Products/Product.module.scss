@@ -28,21 +28,21 @@
   }
 
   .btn {
-    display: inline-block;
+    background-color: $primary;
     border: none;
+    border-radius: 20px;
+    color: $lightSecondary;
+    display: inline-block;
+    font-family: $textFont;
+    font-size: 1.6rem;
+    font-weight: 700;
     outline: none;
     padding: 1.2rem 6rem;
-    font-family: $textFont;
-    background-color: $primary;
-    color: $lightSecondary;
     text-transform: uppercase;
-    font-weight: 700;
-    border-radius: 20px;
-    font-size: 1.6rem;
 
     &:hover {
-      cursor: pointer;
       background-color: lighten($lightPrimary, 3);
+      cursor: pointer;
     }
   }
 }

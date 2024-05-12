@@ -1,0 +1,21 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .logo {
+    background-color: $primary;
+    align-content: center;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}

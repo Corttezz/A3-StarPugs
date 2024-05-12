@@ -1,0 +1,22 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.btn {
+  background-color: $primary;
+  border: none;
+  border-radius: 20px;
+  color: $lightSecondary;
+  display: inline-block;
+  font-family: $textFont;
+  font-size: 1.6rem;
+  font-weight: 700;
+  outline: none;
+  padding: 1.2rem 6rem;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:hover {
+    background-color: lighten($lightPrimary, 3);
+    cursor: pointer;
+  }
+}

@@ -1,3 +1,5 @@
-export default function RegisterPage() {
-  return <div>RegisterPage</div>;
+import Loginform from "@/components/Register/Loginform";
+
+export default function LoginPage() {
+  return <Loginform />;
 }

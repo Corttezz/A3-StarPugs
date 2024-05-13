@@ -9,6 +9,7 @@ const links = [
   { url: "/cardapio", text: "Cardápio" },
   { url: "/shop", text: "Shop" },
   { url: "/login", text: "Login" },
+  { url: "/register", text: "Registrar" },
 ];
 
 export default function Navbar() {
@@ -38,7 +39,7 @@ export default function Navbar() {
               <FiShoppingCart />
             </Link>
           </li>
-          {renderLinks.slice(3, 4)}
+          {renderLinks.slice(3, 5)}
         </ul>
       </nav>
     </section>

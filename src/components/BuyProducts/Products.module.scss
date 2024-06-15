@@ -1,0 +1,103 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/variables.scss";
+
+.products {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+  padding: 0 1rem;
+
+  .grid {
+    @include max-width;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    scroll-margin-top: 10rem;
+    margin-bottom: 4rem;
+
+    @include device(notebook) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include device(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    border: solid lighten($lightPrimary, 3);
+    padding: 1rem 1rem;
+    font-family: $textFont;
+    background-color: $background;
+    color: $lightPrimary;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    width: max-content;
+    margin: 0 auto;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($lightPrimary, 3);
+      color: $background;
+    }
+  }
+}
+
+.product {
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @include device(notebook) {
+    width: 45%;
+  }
+
+  @include device(mobile) {
+    width: 100%;
+  }
+
+  & > img {
+    filter: drop-shadow(0.4rem 0.4rem 0.5rem rgba($black, 0.25));
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: inherit;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: $darkSecondary;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    background-color: $primary;
+    border: none;
+    border-radius: 20px;
+    color: $lightSecondary;
+    display: inline-block;
+    font-family: $textFont;
+    font-size: 1.6rem;
+    font-weight: 700;
+    outline: none;
+    padding: 1.2rem 6rem;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: lighten($lightPrimary, 3);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "@/styles/variables.scss";
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.product {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  & > img {
+    filter: drop-shadow(0.4rem 0.4rem 0.5rem rgba($black, 0.25));
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: inherit;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: $darkSecondary;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    background-color: $primary;
+    border: none;
+    border-radius: 20px;
+    color: $lightSecondary;
+    display: inline-block;
+    font-family: $textFont;
+    font-size: 1.6rem;
+    font-weight: 700;
+    outline: none;
+    padding: 1.2rem 6rem;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: lighten($lightPrimary, 3);
+      cursor: pointer;
+    }
+  }
+}

@@ -7,13 +7,11 @@
   }
 
   @include device(tablet) {
-    justify-content: center;
+    align-items: center;
   }
 
   @include max-width;
 
-  max-height: 48rem;
-  scroll-margin-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -22,6 +20,9 @@
     display: flex;
 
     .div1 {
+      @include device(tablet) {
+        display: none;
+      }
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -65,6 +66,17 @@
     }
 
     .div2 {
+      @include device(tablet) {
+        border-top-left-radius: 20px;
+        border-end-start-radius: 20px;
+        box-shadow: 0.3rem 0.6rem 1em rgba($black, 0.25);
+      }
+
+      @include device(mobile) {
+        flex-direction: column;
+        padding: 5rem 5rem;
+      }
+
       background-color: $primary;
       display: flex;
       align-items: flex-end;
@@ -83,8 +95,9 @@
         filter: drop-shadow(0.3rem 0.6rem 1rem rgba($black, 0.25));
         -webkit-filter: drop-shadow(0.3rem 0.6rem 1rem rgba($black, 0.25));
 
-        @include device(tablet) {
-          display: none;
+        @include device(notebook) {
+          width: 265px;
+          height: 265px;
         }
       }
     }

@@ -1,15 +1,22 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import styles from './Product.module.scss'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import styles from './Product.module.scss';
 
-export default function Product({ product, title, roast, price }) {
-  const [isFavorited, setIsFavorited] = useState(false)
+interface ProductProps {
+  product: string;
+  title: string;
+  roast: string;
+  price: string;
+}
+
+export default function Product({ product, title, roast, price }: ProductProps) {
+  const [isFavorited, setIsFavorited] = useState(false);
 
   const handleFavoriteClick = () => {
-    setIsFavorited(!isFavorited)
-  }
+    setIsFavorited(!isFavorited);
+  };
 
   return (
     <div className={styles.product}>
@@ -26,5 +33,5 @@ export default function Product({ product, title, roast, price }) {
       <h4>R$ {price}</h4>
       <button className={styles.btn}>Comprar agora!</button>
     </div>
-  )
+  );
 }

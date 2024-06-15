@@ -1,0 +1,52 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/variables.scss";
+
+.products {
+  flex-direction: column;
+  margin-bottom: 10rem;
+
+  h2{
+    font-size: 62px;
+    color: $primary;
+    margin-left: 180px;
+    margin-top: 160px
+  }
+
+  .grid {
+    @include max-width;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    scroll-margin-top: 10rem;
+    margin-bottom: 4rem;
+
+    @include device(notebook) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include device(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    border: solid lighten($lightPrimary, 3);
+    //outline: none;
+    padding: 1rem 1rem;
+    font-family: $textFont;
+    background-color: $background;
+    color: $lightPrimary;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    width: max-content;
+    margin: 0 auto;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($lightPrimary, 3);
+      color: $background;
+    }
+  }
+}

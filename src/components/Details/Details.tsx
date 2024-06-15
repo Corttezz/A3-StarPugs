@@ -1,4 +1,4 @@
-import styles from "./Details.module.scss";
+import styles from './Details.module.scss'
 
 export default function Details() {
   return (
@@ -12,5 +12,5 @@ export default function Details() {
         </div>
       </div>
     </section>
-  );
+  )
 }

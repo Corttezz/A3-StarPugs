@@ -1,25 +1,25 @@
-import "@/styles/globals.scss";
-import type { Metadata } from "next";
-import { Inria_Serif } from "next/font/google";
+import '@/styles/globals.scss'
+import type { Metadata } from 'next'
+import { Inria_Serif } from 'next/font/google'
 
 const inriaSerif = Inria_Serif({
-  subsets: ["latin"],
-  weight: "400",
-});
+  subsets: ['latin'],
+  weight: '400'
+})
 
 export const metadata: Metadata = {
-  title: "Starpugs",
-  description: "",
-};
+  title: 'Starpugs',
+  description: ''
+}
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang='pt-BR'>
       <body className={inriaSerif.className}>{children}</body>
     </html>
-  );
+  )
 }

@@ -1,0 +1,103 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.title {
+  color: #1b2c1e;
+  padding: 44.8px 15px;
+  font-size: 45px;
+  margin-bottom: -35px;
+  margin-top: 30px;
+}
+.cartContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.cartSection {
+  flex: 3;
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: -20px;
+}
+
+.cartItemImage {
+  width: 80px;
+  height: 110px;
+  margin: 10px;
+}
+
+.cartItemDetails {
+  margin-left: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartItemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 335px;
+}
+
+.favoriteIcon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.cartItemDetails h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cartItemDetails p {
+  margin: 5px 0;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+.headerItem {
+  flex: 1;
+  font-weight: bold;
+  color: #767676;
+  font-size: 12px;
+  border-bottom: 1px solid #1b2c1e;
+  padding: 10px 15px;
+  text-align: center;
+}
+.headerQuantidade {
+  font-weight: bold;
+  color: #767676;
+  font-size: 12px;
+  border-bottom: 1px solid #1b2c1e;
+  padding: 10px 400px;
+  text-align: center;
+  flex: 1;
+}

@@ -2,44 +2,124 @@
 @import "@/styles/mixins.scss";
 
 .navbar {
-  @include max-width;
-  display: flex;
-  max-width: none;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  padding: 2rem;
-  background-color: $primary;
+  .desktop {
+    @include device(tablet) {
+      display: none;
+    }
 
-  .logo {
+    @include device(notebook) {
+      padding: 2.6rem;
+    }
+
+    @include max-width;
+    display: flex;
+    max-width: none;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
+    top: 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -45%);
-  }
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 2rem;
+    background-color: $primary;
 
-  .navigation {
-    ul {
-      li {
-        display: inline-block;
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -45%);
+    }
 
-        &:not(:last-of-type) {
-          margin-right: 2rem;
-        }
+    .navigation {
+      ul {
+        li {
+          display: inline-block;
 
-        a {
-          padding: 1rem;
-          color: $mediumSecondary;
+          &:not(:last-of-type) {
+            margin-right: 2rem;
+          }
 
-          &:hover {
-            color: lighten($mediumSecondary, 15);
+          a {
+            padding: 1rem;
+            color: $mediumSecondary;
+
+            &:hover {
+              color: lighten($mediumSecondary, 15);
+            }
           }
         }
       }
+    }
+  }
+
+  .mobile {
+    display: none;
+
+    @include device(tablet) {
+      display: block;
+      padding: 5rem;
+      background-color: $primary;
+    }
+
+    .burguer,
+    .close {
+      width: 4rem;
+      height: 4rem;
+      color: $mediumSecondary;
+      position: absolute;
+      z-index: 10;
+    }
+
+    .burguer {
+      top: 3rem;
+      right: 2rem;
+    }
+
+    .logo {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      z-index: 10;
+    }
+
+    .mobile-navigation {
+      position: fixed;
+      right: -30rem;
+      top: 0;
+      background-color: $primary;
+      height: 100vh;
+      width: 30rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 30;
+      transition: all 0.25s ease-in;
+
+      .close {
+        top: 4rem;
+        left: 4rem;
+      }
+
+      ul {
+        li {
+          text-align: center;
+
+          &:not(:last-of-type) {
+            margin-bottom: 4rem;
+          }
+
+          a {
+            padding: 1rem;
+            color: $mediumSecondary;
+            font-size: 2.1rem;
+          }
+        }
+      }
+    }
+
+    &.active .mobile-navigation {
+      right: 0;
     }
   }
 }

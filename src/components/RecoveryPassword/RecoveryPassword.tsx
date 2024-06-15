@@ -1,6 +1,6 @@
-import ButtonPrimary from "@/ui/ButtonPrimary";
-import { FaUser } from "react-icons/fa";
-import styles from "./RecoveryPassword.module.scss";
+import ButtonPrimary from '@/ui/ButtonPrimary'
+import { FaUser } from 'react-icons/fa'
+import styles from './RecoveryPassword.module.scss'
 
 export default function RecoveryPassword() {
   return (
@@ -9,14 +9,14 @@ export default function RecoveryPassword() {
       <p>Confirme seu E-mail:</p>
       <form className={styles.form}>
         <div className={styles.input}>
-          <input id="email" type="email" name="email" required />
-          <label htmlFor="email">Insira seu e-mail </label>
+          <input id='email' type='email' name='email' required />
+          <label htmlFor='email'>Insira seu e-mail </label>
           <FaUser />
         </div>
         <div className={styles.btns}>
-          <ButtonPrimary name="Confirmar" href="/" />
+          <ButtonPrimary name='Confirmar' href='/' />
         </div>
       </form>
     </div>
-  );
+  )
 }

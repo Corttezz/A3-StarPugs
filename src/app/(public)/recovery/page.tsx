@@ -1,5 +1,5 @@
-import RecoveryPassword from "@/components/RecoveryPassword/RecoveryPassword";
+import RecoveryPassword from '@/components/RecoveryPassword/RecoveryPassword'
 
 export default function RecoveryPasswordPage() {
-  return <RecoveryPassword />;
+  return <RecoveryPassword />
 }
